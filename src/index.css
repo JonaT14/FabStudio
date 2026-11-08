@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #thermal-label-print-zone,
+  #thermal-label-print-zone * {
+    visibility: visible;
+  }
+  #thermal-label-print-zone {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100mm;
+    min-height: 60mm;
+    margin: 0;
+    padding: 4mm;
+    background: #ffffff !important;
+    color: #09090b !important;
+    box-shadow: none !important;
+    border: 1px solid #000 !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "FabStudio OS — Gestionnaire d'Atelier 3D, Laser & UV",
+  "description": "Système de pilotage industriel pour parc d'impression 3D Bambu Lab (X1C, P1S, A1 + AMS), découpe laser xTool M2 20W et impression UV relief eufyMake E1/E2.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
